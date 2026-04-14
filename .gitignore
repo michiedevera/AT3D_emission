@@ -1,0 +1,17 @@
+.DS_Store
+notebooks/.ipynb_checkpoints/
+notebooks/personal/
+scripts/personal/
+experiments/
+build/
+dist/
+mie_tables/
+at3d.egg-info/
+at3d/__pycache__/
+tests/__pycache__/
+at3d/*.so
+venv/
+images/
+src/core.pyf
+src/coremodule.c
+at3d/data/
