@@ -81,11 +81,6 @@ def parallel_gradient(solvers, rte_sensors, sensor_mappings, forward_sensors, gr
         else:
             #decide on the division of n_jobs among solvers based on total number of rays.
             keys, ray_start_end, pixel_start_end = subdivide_raytrace_jobs(rte_sensors, n_jobs)
-            #for (key, sensor) in rte_sensors.items():
-                #print(key, sensor.npixels.size, sensor.nrays.size, sensor.pixel_index.data.min(), sensor.pixel_index.data.max())
-            #for key, (ray_start, ray_end), (pix_start, pix_end) in zip(keys, ray_start_end, pixel_start_end):
-                #print('ray', key, ray_start, ray_end)
-                #print('pixel', key, pix_start, pix_end)
             out = Parallel(n_jobs=n_jobs, backend='threading')(
                 delayed(gradient_fun)(
                     solvers[key],

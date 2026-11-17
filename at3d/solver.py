@@ -1464,8 +1464,6 @@ class RTE:
             self._dleg = np.zeros((self._nstleg, self._nleg+1, self._dnumphase))
             self._dphasetab = np.zeros((self._nstphase, self._nscatangle, self._dnumphase))
 
-        print('solver - dphasetab')
-        print(self._dphasetab.shape)
         self._dext = dext
         self._dalb = dalb
         self._diphasep = diphase
